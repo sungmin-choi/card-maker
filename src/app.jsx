@@ -3,12 +3,12 @@ import { BrowserRouter,Route,Switch} from 'react-router-dom';
 import './app.css';
 import LoginPage from './components/loginPage/loginPage';
 
-function App() {
+function App({authService}){
   return (
     <BrowserRouter>
       <Switch>
       <Route path='/' exact>
-        <LoginPage/>
+        <LoginPage authService={authService}/>
       </Route>
       </Switch>
     </BrowserRouter>

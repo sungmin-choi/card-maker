@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './loginPage.module.css';
 const LoginPage = (props) =>{
+    const googleLogin=()=>{
+        
+    }
     return(
         <div className={styles.main}>
             <div className={styles.loginform}>
@@ -10,7 +13,7 @@ const LoginPage = (props) =>{
                 </header>
                 <section className={styles.buttonForm}>
                 <p className={styles.title2}>Login</p>
-                <button className={styles.googleLogin}>Google</button>
+                <button className={styles.googleLogin} onClick={googleLogin}>Google</button>
                 <button className={styles.githubLogin}>Github</button>
                 </section>
                 <footer className={styles.footer}>Code your dream</footer>
