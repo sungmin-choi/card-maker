@@ -1,0 +1,16 @@
+.designBlock {
+  background-color: aliceblue;
+}
+.main {
+  width: 1000px;
+  position: relative;
+}
+.logout {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background-color: #353b48;
+  border: 0px;
+  color: aliceblue;
+  cursor: pointer;
+}

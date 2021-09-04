@@ -1,25 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Header from '../header/header';
+import Footer from '../footer/footer';
 import styles from './loginPage.module.css';
-const LoginPage = (props) =>{
-    const googleLogin=()=>{
-        
+import { useHistory } from 'react-router';
+
+const LoginPage = ({authService}) =>{
+    const history=useHistory();
+    const gotoMakeCard=(userId)=>{
+        history.push({pathname:'/makecard',
+                       state:{id:userId},
+                    });
     }
+    const authLogin=(event)=>{
+        authService.login(event.currentTarget.textContent)
+        .then((result)=>gotoMakeCard(result.user.uid));
+    }
+
+    useEffect(()=>{
+        authService
+        .onAuthChange(user=>{
+            user && gotoMakeCard(user.id);
+        })
+    });
     return(
-        <div className={styles.main}>
             <div className={styles.loginform}>
-                <header className={styles.header}>
-                    <img className={styles.logo} src='/favicon.png' alt="logo" />
-                    <p className={styles.title1}>Business Card Maker</p>
-                </header>
+                <Header/>
                 <section className={styles.buttonForm}>
                 <p className={styles.title2}>Login</p>
-                <button className={styles.googleLogin} onClick={googleLogin}>Google</button>
-                <button className={styles.githubLogin}>Github</button>
+                <button className={styles.googleLogin} onClick={authLogin}>Google</button>
+                <button className={styles.githubLogin} onClick={authLogin}>Github</button>
                 </section>
-                <footer className={styles.footer}>Code your dream</footer>
+                <Footer/>
             </div>
-
-        </div>
     );
 }
 

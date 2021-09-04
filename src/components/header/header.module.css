@@ -1,0 +1,20 @@
+.header {
+  width: 100%;
+  padding-top: 10px;
+  background-color: #273c75;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logo {
+  width: 60px;
+  height: 40px;
+}
+
+.title {
+  margin: 4px;
+  font-size: 2rem;
+  font-weight: 700;
+}

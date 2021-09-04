@@ -1,21 +1,3 @@
-.main {
-  width: 100%;
-  height: 100vh;
-  background-color: #353b48;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header {
-  width: 100%;
-  padding-top: 10px;
-  background-color: #273c75;
-  color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 .loginform {
   background-color: aliceblue;
   width: 440px;
@@ -27,24 +9,7 @@
   align-items: center;
   flex-direction: column;
 }
-.footer {
-  background-color: #273c75;
-  color: aliceblue;
-  width: 100%;
-  padding: 12px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: 500;
-}
-.logo {
-  width: 60px;
-  height: 40px;
-}
-.title1 {
-  margin: 4px;
-  font-size: 2rem;
-  font-weight: 700;
-}
+
 .title2 {
   margin: 16px;
   font-size: 30px;
